@@ -8,7 +8,7 @@ class ElementHandler {
   }
 }
 
-const sourceUrl = "https://rust-lang.github.io/rustup-components-history/";
+const sourceUrl = "https://rust-lang.github.io/rustup-components-history";
 const homepage = "https://github.com/phi-ag/renovate-rust-nightly";
 
 export default {
