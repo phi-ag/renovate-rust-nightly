@@ -2,7 +2,7 @@ class ElementHandler {
   versions = new Set();
 
   text({ text }: { text: string }) {
-    if (text.length === 10 && text.match(/\d{4}-\d{2}-\d{2}/)) {
+    if (text.length === 10 && text.match(/^\d{4}-\d{2}-\d{2}$/)) {
       this.versions.add(text);
     }
   }
@@ -17,9 +17,10 @@ export default {
 
     const handler = new ElementHandler();
     await new HTMLRewriter().on("th", handler).transform(res).arrayBuffer();
+    const releases = Array.from(handler.versions).map((version) => ({ version }));
 
     return Response.json({
-      releases: Array.from(handler.versions).map((version) => ({ version })),
+      releases,
       sourceUrl,
       homepage
     });

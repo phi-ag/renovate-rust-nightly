@@ -15,7 +15,7 @@ Parse nightly versions from [rust-lang.github.io](https://rust-lang.github.io/ru
   ],
   "customDatasources": {
     "rust-nightly": {
-      "defaultRegistryUrlTemplate": "https://renovate-rust-nightly.phi-ag.workers.dev/"
+      "defaultRegistryUrlTemplate": "https://renovate-rust-nightly.phi-ag.workers.dev"
     }
   },
   "customManagers": [
