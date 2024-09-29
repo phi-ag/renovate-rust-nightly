@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "renovate-rust-nightly",
+  "license": "MIT",
+  "description": "Serve Rust nightly versions for Renovate Custom Datasources",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phi-ag/renovate-rust-nightly.git"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20240925.0",
+    "typescript": "5.6.2",
+    "wrangler": "3.78.12"
+  },
+  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+}
