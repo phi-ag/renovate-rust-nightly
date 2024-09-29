@@ -1,0 +1,16 @@
+name: End-to-End
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  e2e:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Test
+        run: |
+          curl --no-progress-meter --fail-with-body \
+            https://renovate-rust-nightly.phi-ag.workers.dev \
+          | jq --exit-status '.releases | length > 0'
