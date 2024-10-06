@@ -1,8 +1,9 @@
 class ElementHandler {
-  versions = new Set<string>();
+  readonly versions = new Set<string>();
+  readonly #versionRegex = new RegExp(/^\d{4}-\d{2}-\d{2}$/);
 
   text({ text }: { text: string }) {
-    if (text.length === 10 && text.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    if (text.length === 10 && this.#versionRegex.test(text)) {
       this.versions.add(text);
     }
   }
@@ -30,4 +31,4 @@ export default {
       homepage
     });
   }
-} satisfies ExportedHandler<Env>;
+} as ExportedHandler<Env>;
