@@ -4,7 +4,6 @@
     "lib": ["es2021"],
     "module": "es2022",
     "moduleResolution": "bundler",
-    "types": ["@cloudflare/workers-types/2023-07-01"],
     "resolveJsonModule": true,
     "checkJs": false,
     "noEmit": true,
@@ -15,6 +14,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  },
-  "include": ["worker-configuration.d.ts", "src/**/*.ts"]
+  }
 }
