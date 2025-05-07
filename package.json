@@ -22,15 +22,6 @@
     "typescript": "5.8.3",
     "wrangler": "4.14.1"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "workerd"
-    ],
-    "ignoredBuiltDependencies": [
-      "sharp"
-    ]
-  },
   "engines": {
     "node": "23.11.0"
   },
