@@ -21,8 +21,8 @@ Parse nightly versions from [rust-lang.github.io](https://rust-lang.github.io/ru
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^rust-toolchain.toml$"],
-      "matchStrings": ["channel = \"nightly-(?<currentValue>.+?)\"\\n"],
+      "managerFilePatterns": ["rust-toolchain.toml"],
+      "matchStrings": ["channel = \"nightly-(?<currentValue>[^\"]+)\""],
       "versioningTemplate": "regex:^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})$",
       "datasourceTemplate": "custom.rust-nightly",
       "depNameTemplate": "rust-nightly"
