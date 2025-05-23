@@ -20,7 +20,7 @@
   "devDependencies": {
     "prettier": "3.5.3",
     "typescript": "5.8.3",
-    "wrangler": "4.15.2"
+    "wrangler": "4.16.1"
   },
   "engines": {
     "node": "24.0.2"
