@@ -18,7 +18,7 @@
     "check": "pnpm format:check && pnpm typecheck"
   },
   "devDependencies": {
-    "prettier": "3.7.1",
+    "prettier": "3.7.2",
     "typescript": "5.9.3",
     "wrangler": "4.51.0"
   },
